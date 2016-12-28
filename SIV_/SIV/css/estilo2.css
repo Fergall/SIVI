@@ -1,0 +1,614 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 0px;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+body {
+	background-image:url('../Imagenes/FondoSinIcono.jpg');
+	 background-position: center center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  /* La imagen de fondo no se repitee */
+  background-repeat: no-repeat;
+  /* La imagen de fondo está fija en el viewport, de modo que no se mueva cuando
+     la altura del contenido supere la altura de la imagen. */
+  background-attachment: fixed;
+  /* La imagen de fondo se reescala cuando se cambia el ancho de ventana
+     del navegador */
+  background-size: cover;
+  /* Fijamos un color de fondo para que se muestre mientras se está
+    cargando la imagen de fondo o si hay problemas para cargarla  */
+  background-color: #464646;
+
+    box-sizing:border-box;
+}
+
+#alert_placeholder{
+     
+ 
+  position:absolute;
+  width:50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+}
+
+table {
+   width: 100%;
+}
+#table {
+  
+	background: #f5f5f5;
+	border-collapse:separate;
+	box-shadow: inset 0 1px 0 #fff;
+	font-size: 12px;
+	line-height: 10px;
+	margin: 30px auto;
+	text-align: left;
+
+	
+}	
+
+#table > th {
+	background: url(http://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+	border-left: 1px solid #555;
+	border-right: 1px solid #777;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+	box-shadow: inset 0 1px 0 #999;
+	color: #fff;
+  font-weight: bold;
+	padding: 5px 10px;
+	position: relative;
+	text-shadow: 0 1px 0 #8b1616;	
+}
+
+/*th:after {
+	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+	content: '';
+	display: block;
+	height: 25%;
+	left: 0;
+	margin: 1px 0 0 0;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+}*/
+
+/*th:first-child {
+	border-left: 1px solid #777;	
+	box-shadow: inset 1px 1px 0 #999;
+}
+
+th:last-child {
+	box-shadow: inset -1px 1px 0 #999;
+}*/
+
+#table > td {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #e8e8e8;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 5px 10px;
+	position: relative;
+	transition: all 300ms;
+}
+
+/*td:first-child {
+	box-shadow: inset 1px 0 0 #fff;
+}	
+
+td:last-child {
+	border-right: 1px solid #e8e8e8;
+	box-shadow: inset -1px 0 0 #fff;
+}	
+
+
+
+tr:last-of-type td {
+	box-shadow: inset 0 -1px 0 #fff; 
+}
+
+tr:last-of-type td:first-child {
+	box-shadow: inset 1px -1px 0 #fff;
+}	
+
+tr:last-of-type td:last-child {
+	box-shadow: inset -1px -1px 0 #fff;
+}	
+
+tbody:hover td {
+	color: transparent;
+	text-shadow: 0 0 3px #aaa;
+}
+
+tbody:hover tr:hover td {
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}*/
+
+
+/*//////*/
+.tres a {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		font-weight: 900;
+		background-color: #EAF3FB;
+		text-decoration: none;
+		color: #000000;
+		border-top-width: 3px;
+		border-right-width: 3px;
+		border-bottom-width: 3px;
+		border-left-width: 3px;
+		border-top-style: solid;
+		border-right-style: solid;
+		border-bottom-style: solid;
+		border-left-style: solid;
+		border-top-color: #999999;
+		border-right-color: #E9E9E9;
+		border-bottom-color: #E9E9E9;
+		border-left-color: #999999;	
+	}
+	.tres a:hover {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		font-weight: 900;
+		background-color: #00CCFF;
+		text-decoration: none;
+		color: #FFFFFF;
+		border-top-width: 3px;
+		border-right-width: 3px;
+		border-bottom-width: 3px;
+		border-left-width: 3px;
+		border-top-style: solid;
+		border-right-style: solid;
+		border-bottom-style: solid;
+		border-left-style: solid;
+		border-top-color: #E9E9E9;
+		border-right-color: #666666;
+		border-bottom-color: #666666;
+		border-left-color: #E9E9E9;
+	}
+
+button:before {
+ content:'';
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 100%;
+ height: 0px;
+ background: rgba(255,255,255,0.3);
+ border-radius: 5px;
+ transition: all 2s ease;
+}
+
+button:hover:before {
+ height: 42px;
+}
+
+
+#slider {
+    
+    position:absolute;
+    top:35%;
+    right:35%;
+    width:600px;
+    height:400px;
+    /*padding:10px;*/
+    /*background-color: #000;*/
+    margin: 0 auto;
+}
+    #slider > div {
+        position:absolute;
+        width:100%;
+        height:100%;
+    }
+    #formularioSesion {
+  position:absolute;
+  top: 60%;
+  right: 0;
+  width: 300px;
+  height: 200px;
+    /*margin: auto;
+    width: 30%;
+    max-width: 600px;
+    /*background-color: #F3F3F3;*/
+    /*padding: 30px;*/
+    /*border: 1px solid rgba(0,0,0,0.2);*/*/
+}
+   #divMaestro {
+  position:absolute;
+  top: 30%;
+  right:20%;
+  
+   
+}
+    #divAcceso {
+  position:absolute;
+  top: 10%;
+  right:20%;
+ 
+   
+}
+     #textoIngreso{
+  position:absolute;
+  top: 19%;
+  right:31%;
+ 
+   
+}
+     #textoAjustes {
+  position:absolute;
+  top: 39%;
+  right:31%;
+ 
+   
+}
+      #textoPre {
+  position:absolute;
+  top: 59%;
+  right:31%;
+ 
+   
+}
+       #textoReportes {
+  position:absolute;
+  top: 79%;
+  right:31%;
+ 
+   
+}
+
+
+     #linkPre{
+  position:absolute;
+  top: 50%;
+  right:21%;
+ 
+   
+}
+  #preAsignacion{
+    background-image: url('../iconos/pre-asignacion.png');
+    width: 128px;
+    height:128px;
+    float: left;
+}
+   #reporte{
+    background-image: url('../iconos/reporteNuevo.png');
+    width: 128px;
+    height:128px;
+    float: left;
+}
+   #sinAcceso{
+    background-image: url('../iconos/sinAccesoNuevo.png');
+    width: 128px;
+    height:128px;
+    float: left;
+}
+
+     
+     #linkReporte{
+  position:absolute;
+  top: 70%;
+  right:21%;
+ 
+   
+}
+     #acceso {
+   position: absolute;
+  top: 80%;
+  right:20%;
+  width: 300px;
+  height: 200px;
+    /*margin: auto;
+    width: 30%;
+    max-width: 600px;
+    /*background-color: #F3F3F3;*/
+    /*padding: 30px;*/
+    /*border: 1px solid rgba(0,0,0,0.2);*/*/
+}
+       #tabla1AccesoVehiculo{
+  position:absolute;
+  top: 70%;
+  right:40%;
+ 
+   
+}
+   #tabla2AccesoVehiculo{
+  position:absolute;
+  top: 70%;
+  right:30%;
+ 
+   
+}
+    #tabla3AccesoVehiculo{
+  position:absolute;
+  top: 70%;
+  right:20%;
+ 
+   
+}
+     #tabla4AccesoVehiculo{
+  position:absolute;
+  top: 70%;
+  right:10%;
+ 
+   
+}
+.button {
+  display: inline-block ;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #8b1616}
+
+ .button:active {
+        background-color: #e8e8e8;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+ #fondoMenu{
+  position:absolute;
+  top: 5%;
+  right:80%;
+}
+ #fondoMenuLogin{
+  position:absolute;
+  top: 5%;
+  right:60%;
+}
+
+.contenedor {
+    width:100%;
+    max-width:1000px;
+    background:#333;
+    margin:0 auto;
+    overflow:hidden;
+}
+/*MANEJO de TABLAS*/
+#tablaAccesoPeatonal {
+    position:absolute;
+    width:75%;
+    left:25%;
+    top:25%;
+     box-sizing:border-box;
+}
+#tablaPre {
+   position:absolute;
+   width:75%;
+   left:5%;
+   top:20%;
+   box-sizing:border-box;
+}
+#tablaReporte {
+   position:absolute;
+   width:75%;
+   left:25%;
+   top:20%;
+   box-sizing:border-box;
+}
+
+#grillas {
+    position:absolute;
+    width:100%;
+    top:100%;
+}
+#grillaPre {
+    position:absolute;
+    width:90%;
+    left:5%;
+    top:85%;
+}
+#grillaReporte {
+    position:absolute;
+    width:90%;
+    left:5%;
+    top:70%;
+}
+#imgReportes {
+    position:absolute;
+    left:80%;
+    top:5%;
+}
+#grillaBuscar {
+
+    position:absolute;
+    width:90%;
+    top:80%;
+}
+#grillaEsta{
+   
+     position:absolute;
+    width:90%;
+    left:7%;
+    top:80%;
+    
+}
+#grillaNegra{
+    position:absolute;
+    width:80%;
+    left:20%;
+    top:70%;
+    
+}
+#grillaResidente{
+    position:absolute;
+    width:80%;
+    left:10%;
+    top:65%;
+    
+}
+
+#grillasClaves {
+ position:absolute;
+    width:80%;
+    left:20%;
+    top:95%; 
+}
+#lblBienveido {
+    position:absolute;
+    top:50%;
+    left:08%;
+}
+#cerrar {
+    position:absolute;
+    top:0%;
+    right:4%;
+}
+#divBuscarPre {
+  position:absolute;
+    width:40%;
+    top:1%;
+    right:1%;
+    height:60%;
+    border:solid;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+
+
+
+@media screen and (max-width: 800px) and (min-width:720px){
+    body {
+       width:100%;
+    }
+   #formularioSesion {
+  position:absolute;
+  top: 40%;
+  right: -35%;
+  width: 100%;
+ // height: 200px;
+   
+}
+ .divImagen {
+       
+        display:none;
+    }
+  #fondoMenu{
+    position:absolute;
+  top: 5%;
+  right:-25%;
+   width: 100%;
+}
+   #fondoMenuLogin{
+    position:absolute;
+  top: 5%;
+  right:-25%;
+   width: 100%;
+}
+
+
+    
+}
+
+@media only screen and (max-width: 720px) and (min-width: 200px) {
+    body {
+       width:100%;
+    }
+   #formularioSesion {
+  position:absolute;
+  top: 40%;
+  right: -30%;
+  width: 100%;
+ /*// height: 200px;*/
+   
+}
+    .divImagen {
+       
+        display:none;
+    }
+     #fondoMenu{
+      position:absolute;
+      top: 5%;
+     left:-2%;
+}
+    #fondoMenuLogin {
+        position: absolute;
+        top: 5%;
+        right: -25%;
+        width: 100%;
+        /*fm del menu*/
+    }
+   #divMaestro {
+  position:absolute;
+  top: 45%;
+  right:63%;
+  
+   
+}
+    #divAcceso {
+  position:absolute;
+  top: 25%;
+  right:63%;
+ 
+   
+}
+     #linkPre{
+  position:absolute;
+  top: 65%;
+  right:65%;
+ 
+   
+} 
+      #linkReporte{
+  position:absolute;
+  top: 85%;
+  right:65%;
+ 
+   
+}
+    #divBienvenido {
+        display:none;
+    }
+    #tablaAccesoPeatonal {
+  
+  left:5%;
+
+}
+   .lblTablas {
+        display:none;
+    }
+
+    .texBox {
+        width:100px;
+    }
+    #tituloIngresoPeatonal {
+        top:10%;
+        left:15%;
+    }
+
+    /*///////////////////*/
+     #tablaAccesoVehicular {
+  width:-50px;
+  left:-115px;
+  top:20%;
+  height:auto;
+
+
+}
+#divBuscarPre {
+ display:none;
+}
+#lblBienveido {
+ display:none;
+}
+
+}
+
+
+
+
+

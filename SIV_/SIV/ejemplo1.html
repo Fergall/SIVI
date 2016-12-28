@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+
+    <script>
+        $(window).ready(function () {
+            
+
+            $.getJSON('http://mindicador.cl/api', function (data) {
+                var dailyIndicators = data;
+                $("<p/>", {
+                    html: 'El valor actual de la UF es $' + dailyIndicators.uf.valor
+                }).appendTo($('#divuf'));
+                $("<p/>", {
+                    html: 'El valor actual del dolar es $' + dailyIndicators.dolar.valor
+                }).appendTo($('#divuf'));
+            }).fail(function () {
+                console.log('Error al consumir la API!');
+            });
+
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <div id="divuf"></div>
+</body>
+</html>

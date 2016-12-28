@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="SIV.Master1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/SIVI.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/skins/_all-skins.css">
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	
+	<!-- daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css"/>
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css"/>
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="plugins/iCheck/all.css"/>
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="plugins/colorpicker/bootstrap-colorpicker.min.css"/>
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css"/>
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/select2.min.css"/>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    <script>
+        bootstrap_alert = function () { }
+        bootstrap_alert.warning = function (message, type) {
+            var texto;
+            texto = '<div id="alertdiv" class="alert ';
+            texto += type;
+            texto += ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span>';
+            texto += '<span class="glyphicon ';
+            switch (type) {
+                case 'alert-danger':
+                    texto += 'glyphicon-remove-sign"';
+                    break;
+                case 'alert-warning':
+                    texto += 'glyphicon-exclamation-sign"';
+                    break;
+                case 'alert-info':
+                    texto += 'glyphicon-info-sign"';
+                    break;
+                case 'alert-success':
+                    texto += 'glyphicon-ok-sign"';
+                    break;
+            }
+            texto += 'aria-hidden="true">&nbsp;&nbsp;</span>';
+            texto += message;
+            texto += '</span></div>';
+
+            $('#alert_placeholder').append(texto);
+            //$('#alert_placeholder').append('<div id="alertdiv" class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span>' + message + '</span></div>');
+            setTimeout(function () { // this will automatically close the alert and remove this if the users doesnt close it in 5 secs
+
+
+                $(".alert").fadeOut('slow');
+
+            }, 5000);
+        }
+
+        function showalert(texto, tipo) {
+            bootstrap_alert.warning(texto, tipo);
+            return false;
+        }
+
+        </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager  ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div>
+        <div class="container center-block text-center">
+        <div id = "alert_placeholder" ></div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- App -->
+    <script src="js/app.min.js"></script>
+	        
+	<script>
+		$( document ).ready(function){   
+			$(".dropdown-button").dropdown();
+		};
+	</script>
+</body>
+</html>
