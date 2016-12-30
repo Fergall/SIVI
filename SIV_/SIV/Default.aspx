@@ -47,13 +47,6 @@
           padding: 15px;
           margin: 20% auto;
         }
-        .form-signin .form-signin-heading,
-        .form-signin .checkbox {
-          margin-bottom: 10px;
-        }
-        .form-signin .checkbox {
-          font-weight: normal;
-        }
         .form-signin .form-control {
           position: relative;
           height: auto;
@@ -62,20 +55,17 @@
                   box-sizing: border-box;
           padding: 10px;
           font-size: 16px;
+          border-radius: 30px;
+          margin-top:20px;
         }
         .form-signin .form-control:focus {
           z-index: 2;
         }
-        .form-signin input[type="email"] {
-          margin-bottom: -1px;
-          border-bottom-right-radius: 0;
-          border-bottom-left-radius: 0;
+        input[type="submit"] {
+            border-radius: 30px;
+            padding:10px;
         }
-        .form-signin input[type="password"] {
-          margin-bottom: 10px;
-          border-top-left-radius: 0;
-          border-top-right-radius: 0;
-        }
+ 
     </style>
 </asp:Content>
     
