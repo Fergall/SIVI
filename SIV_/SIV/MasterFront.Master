@@ -330,10 +330,9 @@
 <footer class="main-footer">
     <div class="container">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 1.0.2
+        <h5><b>Version</b> 1.0.2</h5>
       </div>
-      <strong>Copyright &copy;2016 <a href="http://Desarrollamos.cl">Desarrollamos.cl</a>.</strong> All rights
-      reserved.
+      <h5><strong>Copyright &copy;2016 <a href="http://Desarrollamos.cl">Desarrollamos.cl</a>.</strong> Todos los derechos reservados.</h5>
     </div>
     <!-- /.container -->
   </footer>
