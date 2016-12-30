@@ -32,14 +32,58 @@
         });
 
     </script>
+    <style>
+        body {
+          padding-top: 40px;
+          padding-bottom: 40px;
+          background-color: #bcb4de;
+          background-image: url('css/img/bg1.jpg');
+          background-blend-mode: soft-light;
+          background-size:cover;
+        }
 
+        .form-signin {
+          max-width: 330px;
+          padding: 15px;
+          margin: 20% auto;
+        }
+        .form-signin .form-signin-heading,
+        .form-signin .checkbox {
+          margin-bottom: 10px;
+        }
+        .form-signin .checkbox {
+          font-weight: normal;
+        }
+        .form-signin .form-control {
+          position: relative;
+          height: auto;
+          -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+          padding: 10px;
+          font-size: 16px;
+        }
+        .form-signin .form-control:focus {
+          z-index: 2;
+        }
+        .form-signin input[type="email"] {
+          margin-bottom: -1px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        .form-signin input[type="password"] {
+          margin-bottom: 10px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+    </style>
 </asp:Content>
     
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4 text-center"> 
-            <div class="divImagen">
+    <div class="container">
+        <div class="form-signin"> 
+            <div class="form-signin-heading">
                 <div>
                     <img style="width: 100%;"  src="css/img/siv-DESA.png" />
                 </div>         
@@ -58,15 +102,12 @@
             <asp:UpdatePanel ID ="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div id="formularioSesion" class="divLogin">
-                        <h2>Bienvenido</h2>
-                        <h3 class="tiposesion">Por favor inicie sesión</h3>
                         <br />
 
-                        <asp:TextBox ID="txtUsuario" class="form-control" runat="server" placeholder="&#128273; Usuario"></asp:TextBox>
+                        <asp:TextBox ID="txtUsuario" class="form-control" runat="server" placeholder="Usuario"></asp:TextBox>
                         <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsuario" ErrorMessage="*)Ingrese Nombre Usuario"></asp:RequiredFieldValidator>--%>
-                        <br />
 
-                        <asp:TextBox ID="txtClave" class="form-control" runat="server" placeholder="&#128274; Contraseña" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="txtClave" class="form-control" runat="server" placeholder="Contraseña" TextMode="Password"></asp:TextBox>
                         <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtClave" ErrorMessage="*)Ingrese Password"></asp:RequiredFieldValidator>--%>
                         <br />
 
