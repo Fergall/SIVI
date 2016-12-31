@@ -167,146 +167,148 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <div class="content-wrapper">
-	<div class="col-md-8 col-sm-offset-2">
-	     <div class="box box">
-	        <div class="box-body">
-	            <div class="row">
-	                <div class="col-md-8 col-xs-8">
-			            <div class="input-group input-group-lg">		                
-                            <div class="input-group input-group-lg">
-                                <asp:HiddenField ID="hidId" runat="server" />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-offset-2">
+	         <div class="box box">
+	            <div class="box-body">
+	                <div class="row">
+	                    <div class="col-md-8 col-xs-8">
+			                <div class="input-group input-group-lg">		                
+                                <div class="input-group input-group-lg">
+                                    <asp:HiddenField ID="hidId" runat="server" />
 
                                
-                                <asp:TextBox ID="txtModRut" runat="server" CssClass="form-control" placeholder="Ingrese RUT"></asp:TextBox>
-                                <span class="input-group-btn">
-                                    <asp:LinkButton ID="lnkBtnValidar" runat="server" class="btn btn-info btn-flat" Text="<i class='glyphicon glyphicon-ok'></i>Validar" OnClick="lnkBtnValidar_Click" />
-                                    <%--<asp:Button ID="btnValidar" runat="server" Text="<i class='glyphicon glyphicon-floppy-disk'></i>&nbsp;&nbsp;&nbsp;Guardar" />--%>
-                                </span>
-                            </div>
-			            </div>
-			        </div> 
-			        <div class="col-md-4 col-xs-4">   
-			            <div class="form-group">
-			                <div class="col-sm-12 text-center">
-			                    <div class="checkbox">
-			                        <label>
-			                            <asp:CheckBox ID="chkRut" runat="server" CssClass="form-horizontal" Text="Rut extranjero" TextAlign="Right" />
-			                        </label>
+                                    <asp:TextBox ID="txtModRut" runat="server" CssClass="form-control" placeholder="Ingrese RUT"></asp:TextBox>
+                                    <span class="input-group-btn">
+                                        <asp:LinkButton ID="lnkBtnValidar" runat="server" class="btn btn-info btn-flat" Text="<i class='glyphicon glyphicon-ok'></i> Buscar" OnClick="lnkBtnValidar_Click" />
+                                        <%--<asp:Button ID="btnValidar" runat="server" Text="<i class='glyphicon glyphicon-floppy-disk'></i>&nbsp;&nbsp;&nbsp;Guardar" />--%>
+                                    </span>
+                                </div>
+			                </div>
+			            </div> 
+			            <div class="col-md-4 col-xs-4">   
+			                <div class="form-group">
+			                    <div class="col-sm-12 text-center">
+			                        <div class="checkbox">
+			                            <label>
+			                                <asp:CheckBox ID="chkRut" runat="server" CssClass="form-horizontal" Text="Rut extranjero" TextAlign="Right" />
+			                            </label>
+			                        </div>
 			                    </div>
 			                </div>
-			            </div>
-	            	</div>
-	            </div>
+	            	    </div>
+	                </div>
 					
 	
-				<div class="row">
-					<div class="col-md-6 col-xs-6">
-			            <div class="form-group form-group-lg">
-			                <asp:Label ID="lblModNombres" runat="server" CssClass="control-label" Text="Nombres: "></asp:Label>
-			                <asp:TextBox ID="txtModNombres" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
-			            </div>
+				    <div class="row">
+					    <div class="col-md-6 col-xs-6">
+			                <div class="form-group form-group-lg">
+			                    <asp:Label ID="lblModNombres" runat="server" CssClass="control-label" Text="Nombres: "></asp:Label>
+			                    <asp:TextBox ID="txtModNombres" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
+			                </div>
 			            
-			            <div class="form-group form-group-lg">
-			                <asp:Label ID="lblModUApelllidos" runat="server" CssClass="control-label" Text="Apellidos:"></asp:Label>
-			                <asp:TextBox ID="txtModApellidos" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
-			            </div>
+			                <div class="form-group form-group-lg">
+			                    <asp:Label ID="lblModUApelllidos" runat="server" CssClass="control-label" Text="Apellidos:"></asp:Label>
+			                    <asp:TextBox ID="txtModApellidos" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
+			                </div>
 
-			            <div class="form-group-lg">
-	                        <!-- <label>Edificio</label> -->
-                            <asp:Label ID="lblModEstado" runat="server" CssClass="control-label" Text="Estado:"></asp:Label>
-	                         <asp:DropDownList ID="ddlModEstado" runat="server" CssClass="form-control text-uppercase"></asp:DropDownList>
-	                    </div>
+			                <div class="form-group-lg">
+	                            <!-- <label>Edificio</label> -->
+                                <asp:Label ID="lblModEstado" runat="server" CssClass="control-label" Text="Estado:"></asp:Label>
+	                             <asp:DropDownList ID="ddlModEstado" runat="server" CssClass="form-control text-uppercase"></asp:DropDownList>
+	                        </div>
 
-	                    <div class="form-group-lg">
-	                        <!-- <label>Depto</label> -->
-                            <asp:Label ID="lblModRes" runat="server" Text="Residente:"></asp:Label>
-	                        <asp:DropDownList ID="ddlModRes" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlModRes_SelectedIndexChanged"></asp:DropDownList>
-	                    </div>
+	                        <div class="form-group-lg">
+	                            <!-- <label>Depto</label> -->
+                                <asp:Label ID="lblModRes" runat="server" Text="Residente:"></asp:Label>
+	                            <asp:DropDownList ID="ddlModRes" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlModRes_SelectedIndexChanged"></asp:DropDownList>
+	                        </div>
 
-                        <div class="form-group-lg">
-	                        <!-- <label>Depto</label> -->
-                            <asp:Label ID="lblModViv" runat="server" CssClass="text-right" Text="Vivienda:"></asp:Label>
-	                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                                <ContentTemplate>
-                                    <asp:DropDownList ID="ddlModViv" runat="server" CssClass="form-control"></asp:DropDownList>
-                                </ContentTemplate>
-                                <Triggers>
+                            <div class="form-group-lg">
+	                            <!-- <label>Depto</label> -->
+                                <asp:Label ID="lblModViv" runat="server" CssClass="text-right" Text="Vivienda:"></asp:Label></td>
+	                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        <asp:DropDownList ID="ddlModViv" runat="server" CssClass="form-control"></asp:DropDownList>
+                                    </ContentTemplate>
+                                    <Triggers>
 
-                                    <asp:AsyncPostBackTrigger ControlID="ddlModRes" EventName="SelectedIndexChanged" />
+                                        <asp:AsyncPostBackTrigger ControlID="ddlModRes" EventName="SelectedIndexChanged" />
 
-                                </Triggers>
-                            </asp:UpdatePanel>
-	                    </div>
-		            </div>
+                                    </Triggers>
+                                </asp:UpdatePanel>
+	                        </div>
+		                </div>
 					
 
                   
 
-					<div class="col-md-6 col-xs-6 text-center">
-			            <div class="box-body box-profile text-centered">
-			                <div id="divVideo">
-                                <video autoplay width="320" height="240"></video>
-                            </div>
-                            <div id="divCanvas" class="col-sm-2" style="display: none;">
-                                <canvas width="140" height="190"></canvas>
-                            </div>  
-                            <div id="divImg" class="col-sm-4 text-center" style="display:none">
-                                <img id="imagen"  width="140" height="190" />
-                                <asp:Image ID="serverImg" Width="140" Height="190" runat="server" />
-                            </div>          
-			            </div>
-
-			            <div class="row">
-			            	<div class="col-md-4 col-xs-4">
-			                    <span class="input-group-btn-lg">			                       
-                                    <asp:LinkButton ID="lnkIniciar" runat="server" Text="Iniciar" class="btn btn-sm btn-primary btn-block" OnClientClick="return false;" />
-			                    </span>
+					    <div class="col-md-6 col-xs-6 text-center">
+			                <div class="box-body box-profile text-centered">
+			                    <div id="divVideo">
+                                    <video autoplay width="320" height="240"></video>
+                                </div>
+                                <div id="divCanvas" class="col-sm-2" style="display: none;">
+                                    <canvas width="140" height="190"></canvas>
+                                </div>  
+                                <div id="divImg" class="col-sm-4 text-center" style="display:none">
+                                    <img id="imagen"  width="140" height="190" />
+                                    <asp:Image ID="serverImg" Width="140" Height="190" runat="server" />
+                                </div>          
 			                </div>
 
-                            <div class="col-md-4 col-xs-4">
-			                    <span class="input-group-btn-lg">
-			                        <asp:LinkButton ID="lnkTerminar" runat="server" Text="Finalizar" class="btn btn-sm btn-primary btn-block" OnClientClick="return false;" />
-			                    </span>
-			                </div>
+			                <div class="row">
+			            	    <div class="col-md-4 col-xs-4">
+			                        <span class="input-group-btn-lg">			                       
+                                        <asp:LinkButton ID="lnkIniciar" runat="server" Text="Iniciar" class="btn btn-sm btn-primary btn-block" OnClientClick="return false;" />
+			                        </span>
+			                    </div>
+
+                                <div class="col-md-4 col-xs-4">
+			                        <span class="input-group-btn-lg">
+			                            <asp:LinkButton ID="lnkTerminar" runat="server" Text="Finalizar" class="btn btn-sm btn-primary btn-block" OnClientClick="return false;" />
+			                        </span>
+			                    </div>
 			
-			                <div class="col-md-4 col-xs-4">
-			                    <span class="input-group-btn-lg">
-			                        <asp:LinkButton ID="lnkCapturar" runat="server" Text="Capturar" class="btn btn-sm btn-primary btn-block" OnClientClick="return false;" />
-			                    </span>
+			                    <div class="col-md-4 col-xs-4">
+			                        <span class="input-group-btn-lg">
+			                            <asp:LinkButton ID="lnkCapturar" runat="server" Text="Capturar" class="btn btn-sm btn-primary btn-block" OnClientClick="return false;" />
+			                        </span>
+			                    </div>
 			                </div>
-			            </div>
 
-                        <div class="form-group-lg text-left">
-	                        <asp:Label ID="lblModDocumento" runat="server" CssClass="text-right" Text="Documento:"></asp:Label>
-	                        <asp:DropDownList ID="ddlModDoc" runat="server" CssClass="form-control"></asp:DropDownList>
-	                    </div>    			           
-		            </div>
+                            <div class="form-group-lg text-left">
+	                            <asp:Label ID="lblModDocumento" runat="server" CssClass="text-right" Text="Documento:"></asp:Label>
+	                            <asp:DropDownList ID="ddlModDoc" runat="server" CssClass="form-control"></asp:DropDownList>
+	                        </div>    			           
+		                </div>
 		            
-	            </div>
+	                </div>
 		            	            
 
 	            
-	        </div>
+	            </div>
 	
-	        <div class="box-footer">
-	            <div class="row">
-	                <div class="col-md-6 col-xs-6">
-	                   <span class="input-group-btn-lg">
-                            <asp:LinkButton ID="lnkModGuardar" runat="server" Text="<i class='glyphicon glyphicon-floppy-disk'></i> Guardar" class="btn-form btn-primary btn-block" OnClick="lnkModGuardar_Click" />
-	                   </span> 
-	                </div>
+	            <div class="box-footer">
+	                <div class="row">
+	                    <div class="col-md-6 col-xs-6">
+	                       <span class="input-group-btn-lg">
+                                <asp:LinkButton ID="lnkModGuardar" runat="server" Text="<i class='glyphicon glyphicon-floppy-disk'></i> Guardar" class="btn-form btn-primary btn-block" OnClick="lnkModGuardar_Click" />
+	                       </span> 
+	                    </div>
 	
-	                <div class="col-md-6 col-xs-6">
-	                    <span class="input-group-btn-lg">
-	                        <button type="submit" name="Limpiar" id="limpiar" class="btn-form btn-primary btn-block">
-	                            Limpiar
-	                        </button>
-	                    </span>
+	                    <div class="col-md-6 col-xs-6">
+	                        <span class="input-group-btn-lg">
+	                            <button type="submit" name="Limpiar" id="limpiar" class="btn-form btn-primary btn-block">
+	                                Limpiar
+	                            </button>
+	                        </span>
+	                    </div>
 	                </div>
 	            </div>
 	        </div>
-	    </div>
+           </div>
 	</div> <!-- /container -->
 
         <!-- Modal -->

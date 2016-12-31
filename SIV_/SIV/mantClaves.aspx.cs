@@ -144,6 +144,7 @@ namespace SIV
             hidClId.Value = "0";
             ScriptManager.RegisterStartupScript(this, this.GetType(), "openPopup", "levantaModal();", true);
         }
+
         protected void lnkModGuardar_Click(object sender, EventArgs e)
         {
             Clave  cl = new Clave();
