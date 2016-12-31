@@ -1,4 +1,13 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterFront.Master" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="SIV.home" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .carousel-img {
+            width:100%;
+            height:100%;
+        }
+    </style>
+</asp:Content>
+
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="col-md-12 text-center">
@@ -11,21 +20,21 @@
 	    </ol>
 	    <div class="carousel-inner">
 	      <div class="item active">
-	        <img src="http://placehold.it/1300x450/39CCCC/ffffff&text=Bienvenido+a+Sistema+Integral+de+Visitas" alt="First slide">
+	        <img class="carousel-img" src="http://placehold.it/1300x450/39CCCC/ffffff&text=Bienvenido+a+Sistema+Integral+de+Visitas" alt="First slide">
 	
 	        <div class="carousel-caption">
 	          First Slide
 	        </div>
 	      </div>
 	      <div class="item">
-	        <img src="http://placehold.it/1300x450/3c8dbc/ffffff&text=Bienvenido+a+SIV" alt="Second slide">
+	        <img class="carousel-img" src="http://placehold.it/1300x450/3c8dbc/ffffff&text=Bienvenido+a+SIV" alt="Second slide">
 	
 	        <div class="carousel-caption">
 	          Second Slide
 	        </div>
 	      </div>
 	      <div class="item">
-	        <img src="http://placehold.it/1300x450/f39c12/ffffff&text=Placeholder" alt="Third slide">
+	        <img class="carousel-img"  src="http://placehold.it/1300x450/f39c12/ffffff&text=Placeholder" alt="Third slide">
 	
 	        <div class="carousel-caption">
 	          Third Slide
