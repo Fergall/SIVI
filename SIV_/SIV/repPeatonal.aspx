@@ -10,26 +10,25 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container">
-            <br />
             <h2>Reporte movimientos</h2>
-
-            <br />
             <div class="panel ">
                 <div class="panel-body">
                     <div class="form-horizontal">
+                        <div class="row">
+                              <div class="col-md-6">
+                                    <div class="form-group form-group-lg">                                                                     
+                                        <asp:Label ID="lblFilApellido" runat="server" CssClass="control-label" Text="Apellido: "></asp:Label>
+                                        <asp:TextBox ID="txtFilApellido" runat="server" CssClass="form-control"></asp:TextBox>
+                                    </div>
+                              </div>
 
-                      <div class="form-group formulario">
-                        <label class="col-sm-2 control-label">Apellido :</label>
-                        <div class="col-sm-10">
-                            <asp:TextBox ID="txtFilApellido" runat="server" CssClass="form-control-static"></asp:TextBox>
+                                <div class="col-md-6">
+                                    <div class="form-group form-group-lg">                                                                       
+                                        <asp:Label ID="lblFilTipo" runat="server" CssClass="control-label" Text="Tipo: "></asp:Label>
+                                        <asp:DropDownList ID="ddlFilTipo" runat="server" CssClass="form-control"></asp:DropDownList>
+                                    </div>
+                              </div>
                         </div>
-                      </div>
-                      <div class="form-group formulario">
-                        <label class="col-sm-2 control-label">Tipo :</label>
-                        <div class="col-sm-10">
-                            <asp:DropDownList ID="ddlFilTipo" runat="server" CssClass="form-control-static"></asp:DropDownList>
-                        </div>
-                      </div>
                         
                       <div class="form-group">
                         <div class="col-sm-6">
