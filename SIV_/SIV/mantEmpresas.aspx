@@ -1,6 +1,74 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterFront.Master" AutoEventWireup="true" CodeBehind="mantEmpresas.aspx.cs" Inherits="SIV.mantEmpresas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script>
+        $(function () {
+            window.onload = function () {
+                var grid = document.getElementById('ContentPlaceHolder1_tableUsuarios');
+                var tbody = grid.getElementsByTagName("tbody")[0]; //gets the first and only tbody
+                var firstTr = tbody.getElementsByTagName("tr")[0]; //gets the first tr, hopefully contains the th's
+
+                tbody.removeChild(firstTr); //remove tr's from table
+
+                var newTh = document.createElement('thead'); //creates thead
+                newTh.appendChild(firstTr); //puts ths in thead
+                grid.insertBefore(newTh, tbody); //puts thead behore tbody
+
+                $('#ContentPlaceHolder1_tableUsuarios').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": true,
+                    "pageLength": 5
+                });
+
+                $('#tableUsuarios').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": true,
+                    "pageLength": 6
+                });
+
+            }
+
+		    $("#example1").DataTable();
+		    $('#example2').DataTable({
+		      "paging": true,
+		      "lengthChange": false,
+		      "searching": true,
+		      "ordering": true,
+		      "info": true,
+		      "autoWidth": true,
+		      "pageLength": 6
+		    });
+		    $('#tableLista').DataTable({
+		        "paging": true,
+		        "lengthChange": false,
+		        "searching": true,
+		        "ordering": true,
+		        "info": true,
+		        "autoWidth": true,
+		        "pageLength": 6
+		    });
+
+		    
+
+		    $('#example3').DataTable({
+		      "paging": true,
+		      "lengthChange": false,
+		      "searching": true,
+		      "ordering": true,
+		      "info": true,
+		      "autoWidth": true
+		    });
+		  });
+		</script>  
+    
     <script>
         $(document).ready(function () {
 
@@ -248,71 +316,5 @@
 
         </div>
     </div>
-    <script>
-    $(function () {
-            window.onload = function () {
-                var grid = document.getElementById('ContentPlaceHolder1_tableUsuarios');
-                var tbody = grid.getElementsByTagName("tbody")[0]; //gets the first and only tbody
-                var firstTr = tbody.getElementsByTagName("tr")[0]; //gets the first tr, hopefully contains the th's
-
-                tbody.removeChild(firstTr); //remove tr's from table
-
-                var newTh = document.createElement('thead'); //creates thead
-                newTh.appendChild(firstTr); //puts ths in thead
-                grid.insertBefore(newTh, tbody); //puts thead behore tbody
-
-                $('#ContentPlaceHolder1_tableUsuarios').DataTable({
-                    "paging": true,
-                    "lengthChange": false,
-                    "searching": false,
-                    "ordering": true,
-                    "info": true,
-                    "autoWidth": true,
-                    "pageLength": 2
-                });
-
-                $('#tableUsuarios').DataTable({
-                    "paging": true,
-                    "lengthChange": false,
-                    "searching": false,
-                    "ordering": true,
-                    "info": true,
-                    "autoWidth": true,
-                    "pageLength": 6
-                });
-
-            }
-
-		    $("#example1").DataTable();
-		    $('#example2').DataTable({
-		      "paging": true,
-		      "lengthChange": false,
-		      "searching": true,
-		      "ordering": true,
-		      "info": true,
-		      "autoWidth": true,
-		      "pageLength": 6
-		    });
-		    $('#tableLista').DataTable({
-		        "paging": true,
-		        "lengthChange": false,
-		        "searching": true,
-		        "ordering": true,
-		        "info": true,
-		        "autoWidth": true,
-		        "pageLength": 6
-		    });
-
-		    
-
-		    $('#example3').DataTable({
-		      "paging": true,
-		      "lengthChange": false,
-		      "searching": true,
-		      "ordering": true,
-		      "info": true,
-		      "autoWidth": true
-		    });
-		  });
-		</script>       
+      
 </asp:Content>
