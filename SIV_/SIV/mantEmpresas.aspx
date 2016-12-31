@@ -183,59 +183,59 @@
                             <h4 class="modal-title">
                                 <asp:Label ID="lblModHeader" runat="server"></asp:Label></h4>
                         </div>
-                        <table class="table">
+                        
+                        <div class="box-body">			
+                            
+                            <asp:HiddenField ID="hidEmpId" runat="server" />
+                            <div class="form-group form-group-lg">
+	                            <asp:Label ID="lblModRut" runat="server" CssClass="control-label" Text="Rut empresa: "></asp:Label>
+	                            <asp:TextBox ID="txtModRut" runat="server" CssClass="form-control"></asp:TextBox>
+	                        </div>
+                            	            
+	                        <div class="form-group form-group-lg">
+	                            <asp:Label ID="lblModRazon" runat="server" CssClass="control-label" Text="Razón social:"></asp:Label>
+	                            <asp:TextBox ID="txtModRazon" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
+	                        </div>
 
-                            <tbody>
-                                <tr>
-                                    <td class="col-sm-2 text-right">
-                                        <asp:HiddenField ID="hidEmpId" runat="server" />
-                                        <asp:Label ID="lblModRut" runat="server" CssClass="control-label" Text="Rut empresa: "></asp:Label></td>
-                                    <td class="col-sm-2">
-                                        <asp:TextBox ID="txtModRut" runat="server" CssClass="form-control"></asp:TextBox></td>
+	                        <div class="form-group form-group-lg">
+	                            <asp:Label ID="lblModDir" runat="server" Text="Dirección:"></asp:Label>
+	                            <asp:TextBox ID="txtModDir" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
+	                        </div>
 
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModRazon" runat="server" CssClass="control-label" Text="Razón social:"></asp:Label></td>
-                                    <td class="">
-                                        <asp:TextBox ID="txtModRazon" runat="server" CssClass="form-control text-uppercase"></asp:TextBox></td>
+				            <div class="row">
+					            <div class="col-md-6 col-xs-12 text-center">
+			                        <div class="form-group form-group-lg">
+			                            <asp:Label ID="lblModFono" runat="server" CssClass="text-right" Text="Teléfono/celular:"></asp:Label>
+			                            <asp:TextBox ID="txtModFono" runat="server" CssClass="form-control"></asp:TextBox>
+			                        </div>
+		                        </div>
+		            
+		                        <div class="col-md-6 col-xs-12 text-center">
+			                        <div class="form-group form-group-lg">
+			                            <asp:Label ID="lblModCorreo" runat="server" CssClass="text-right" Text="Correo:"></asp:Label>
+			                            <asp:TextBox ID="txtModCorreo" runat="server" CssClass="form-control"></asp:TextBox>
+			                        </div>
+		                        </div>
+	                        </div>
 
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModDir" runat="server" Text="Dirección:"></asp:Label></td>
-                                    <td class="">
-                                        <asp:TextBox ID="txtModDir" runat="server" CssClass="form-control text-uppercase"></asp:TextBox></td>
+	                        <div class="form-group form-group-lg">
+	                            <asp:Label ID="lblModCont" runat="server" CssClass="text-right" Text="Contacto:"></asp:Label>
+	                            <asp:TextBox ID="txtModCont" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
+	                        </div>              
+	
+	
+	                    <div class="box-footer">
+	                        <div class="row">
+	                            <div class="col-md-6 col-xs-6">
+	                                <span class="input-group-btn-lg">
+	                                    <asp:LinkButton ID="lnkModGuardar" runat="server" Text="<i class='glyphicon glyphicon-floppy-disk'></i>&nbsp;&nbsp;&nbsp;Guardar" class="btn btn-primary" OnClick="lnkModGuardar_Click" />
+	                                </span>
+	                            </div>
 
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModCont" runat="server" CssClass="text-right" Text="Contacto:"></asp:Label></td>
-                                    <td class="">
-                                        <asp:TextBox ID="txtModCont" runat="server" CssClass="form-control text-uppercase"></asp:TextBox></td>
-
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModCorreo" runat="server" CssClass="text-right" Text="Correo:"></asp:Label></td>
-                                    <td class="">
-                                        <asp:TextBox ID="txtModCorreo" runat="server" CssClass="form-control"></asp:TextBox></td>
-
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModFono" runat="server" CssClass="text-right" Text="Teléfono/celular:"></asp:Label></td>
-                                    <td class="">
-                                        <asp:TextBox ID="txtModFono" runat="server" CssClass="form-control"></asp:TextBox></td>
-
-                                </tr>
-                                <tr>
-                                    <td class="text-center" colspan="2">
-                                        <asp:LinkButton ID="lnkModGuardar" runat="server" Text="<i class='glyphicon glyphicon-floppy-disk'></i>&nbsp;&nbsp;&nbsp;Guardar" class="btn btn-primary" OnClick="lnkModGuardar_Click" />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+	                        </div>
+	                    </div>
+                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -248,5 +248,71 @@
 
         </div>
     </div>
-           
+    <script>
+    $(function () {
+            window.onload = function () {
+                var grid = document.getElementById('ContentPlaceHolder1_tableUsuarios');
+                var tbody = grid.getElementsByTagName("tbody")[0]; //gets the first and only tbody
+                var firstTr = tbody.getElementsByTagName("tr")[0]; //gets the first tr, hopefully contains the th's
+
+                tbody.removeChild(firstTr); //remove tr's from table
+
+                var newTh = document.createElement('thead'); //creates thead
+                newTh.appendChild(firstTr); //puts ths in thead
+                grid.insertBefore(newTh, tbody); //puts thead behore tbody
+
+                $('#ContentPlaceHolder1_tableUsuarios').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": true,
+                    "pageLength": 2
+                });
+
+                $('#tableUsuarios').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": true,
+                    "pageLength": 6
+                });
+
+            }
+
+		    $("#example1").DataTable();
+		    $('#example2').DataTable({
+		      "paging": true,
+		      "lengthChange": false,
+		      "searching": true,
+		      "ordering": true,
+		      "info": true,
+		      "autoWidth": true,
+		      "pageLength": 6
+		    });
+		    $('#tableLista').DataTable({
+		        "paging": true,
+		        "lengthChange": false,
+		        "searching": true,
+		        "ordering": true,
+		        "info": true,
+		        "autoWidth": true,
+		        "pageLength": 6
+		    });
+
+		    
+
+		    $('#example3').DataTable({
+		      "paging": true,
+		      "lengthChange": false,
+		      "searching": true,
+		      "ordering": true,
+		      "info": true,
+		      "autoWidth": true
+		    });
+		  });
+		</script>       
 </asp:Content>

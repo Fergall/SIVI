@@ -226,7 +226,7 @@
 
                         <div class="form-group-lg">
 	                        <!-- <label>Depto</label> -->
-                            <asp:Label ID="lblModViv" runat="server" CssClass="text-right" Text="Vivienda:"></asp:Label></td>
+                            <asp:Label ID="lblModViv" runat="server" CssClass="text-right" Text="Vivienda:"></asp:Label>
 	                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                 <ContentTemplate>
                                     <asp:DropDownList ID="ddlModViv" runat="server" CssClass="form-control"></asp:DropDownList>

@@ -17,10 +17,7 @@
 
     <div class="tab-content ">
         <div class="panel container-fluid">
-            <br />
             <h2>Mantenedor de claves</h2>
-
-            <br />
             <div class="panel ">
                 <div class="panel-body">
 
@@ -66,76 +63,97 @@
                             <h4 class="modal-title">
                                 <asp:Label ID="lblModHeader" runat="server"></asp:Label></h4>
                         </div>
-                        <table class="table">
 
-                            <tbody>
-                                <tr>
-                                      <td class="col-sm-2 text-right">
-                                        <asp:HiddenField ID="hidClId" runat="server" />
-                                        <asp:Label ID="lblModEmp" runat="server" CssClass="control-label" Text="Empresa: "></asp:Label></td>
-                                    <td class="col-sm-2">
-                                        <asp:DropDownList ID="ddlModEmp" runat="server" CssClass="form-control"></asp:DropDownList>
-                                      </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-2 text-right">
-                                        <asp:Label ID="lblModNombre" runat="server" CssClass="control-label" Text="Nombre: "></asp:Label></td>
-                                    <td class="col-sm-2">
-                                        <asp:TextBox ID="txtModNombre" runat="server" CssClass="form-control"></asp:TextBox></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModUsuario" runat="server" CssClass="control-label" Text="Nombre usuario:"></asp:Label></td>
-                                    <td class="">
-                                        <asp:TextBox ID="txtModUsuario" runat="server" CssClass="form-control text-uppercase"></asp:TextBox></td>
+                        <div class="box-body">                            
+                            <asp:HiddenField ID="hidClId" runat="server" />          
 
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModPass" runat="server" Text="Password:"></asp:Label></td>
-                                    <td class="">
-                                        <asp:TextBox ID="txtModPass" runat="server" CssClass="form-control text-uppercase"></asp:TextBox></td>
+                            <div class="col-md-12 col-xs-12">    
+		                        <div class="form-group form-group-lg">
+		                            <asp:Label ID="lblModEmp" runat="server" CssClass="control-label" Text="Empresa: "></asp:Label>
+		                            <asp:DropDownList ID="ddlModEmp" runat="server" CssClass="form-control"></asp:DropDownList>
+		                        </div>
+            	            </div>
 
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModPass2" runat="server" CssClass="text-right" Text="Repetir password:"></asp:Label></td>
-                                    <td class="">
-                                        <asp:TextBox ID="txtModPass2" runat="server" CssClass="form-control text-uppercase"></asp:TextBox></td>
+                            <div class="row">
+				                <div class="col-md-6 col-xs-12">    
+		                            <div class="form-group form-group-lg">
+		                                <asp:Label ID="lblModNombre" runat="server" CssClass="control-label" Text="Nombre: "></asp:Label>
+		                                <asp:TextBox ID="txtModNombre" runat="server" CssClass="form-control"></asp:TextBox>
+		                            </div>
+            	                </div>
 
-                                </tr>
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModEstado" runat="server" CssClass="text-right" Text="Estado:"></asp:Label></td>
-                                    <td class="">
-                                         <asp:DropDownList ID="ddlModEstado" runat="server" CssClass="form-control"></asp:DropDownList></td>
+            	                <div class="col-md-6 col-xs-12"> 
+		                            <div class="form-group form-group-lg">
+		                                <asp:Label ID="lblModUsuario" runat="server" CssClass="control-label" Text="Nombre usuario:"></asp:Label>
+		                                <asp:TextBox ID="txtModUsuario" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
+		                            </div>
+		                        </div>
+		                    </div>    
 
-                                </tr>
-                                 <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModNivel" runat="server" CssClass="text-right" Text="Nivel:"></asp:Label></td>
-                                    <td class="">
-                                         <asp:DropDownList ID="ddlModNivel" runat="server" CssClass="form-control"></asp:DropDownList></td>
+			                <div class="row">
+				                <div class="col-md-6 col-xs-12"> 
+		                            <div class="form-group form-group-lg">
+		                                <asp:Label ID="lblModPass" runat="server" Text="Password:"></asp:Label>
+		                                <asp:TextBox ID="txtModPass" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
+		                            </div>
+	                            </div>
+	            
+	                            <div class="col-md-6 col-xs-12"> 
+		                            <div class="form-group form-group-lg">
+		                                <asp:Label ID="lblModPass2" runat="server" CssClass="text-right" Text="Repetir password:"></asp:Label>
+		                                <asp:TextBox ID="txtModPass2" runat="server" CssClass="form-control text-uppercase"></asp:TextBox>
+		                            </div>
+		                        </div>
+			                </div>
 
-                                </tr>
-                                
-                                <tr>
-                                    <td class="text-right">
-                                        <asp:Label ID="lblModPermisos" runat="server" CssClass="text-right" Text="Permisos:"></asp:Label></td>
-                                    <td class="">
-                                        <asp:CheckBoxList ID="chkLstPermisos" runat="server"></asp:CheckBoxList>
-                                    </td>
+                            <div class="row">
+				                <div class="col-md-6 col-xs-12"> 
+		                            <div class="form-group form-group-lg">
+		                                <asp:Label ID="lblModEstado" runat="server" CssClass="text-right" Text="Estado:"></asp:Label>
+		                                <asp:DropDownList ID="ddlModEstado" runat="server" CssClass="form-control"></asp:DropDownList>
+		                            </div>
+	                            </div>
+	            
+	                            <div class="col-md-6 col-xs-12"> 
+		                            <div class="form-group form-group-lg">
+		                                <asp:Label ID="lblModNivel" runat="server" CssClass="text-right" Text="Nivel:"></asp:Label>
+		                                <asp:DropDownList ID="ddlModNivel" runat="server" CssClass="form-control"></asp:DropDownList>
+		                            </div>
+		                        </div>
+			                </div>
+                                        
 
+			                <div class="form-group form-group-lg">
+            	                
+			
+			                    <div class="col-md-4 col-md-offset-4 col-xs-6">
+                                    <asp:Label ID="lblModPermisos" runat="server" CssClass="text-right" Text="Permisos:"></asp:Label>
+				                    <div class="form-group text-justify">
+					                    <asp:CheckBoxList ID="chkLstPermisos" runat="server"></asp:CheckBoxList>   
+				                    </div>
+			                    </div><!-- col-12 -->
+			                </div>
+		
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <span class="input-group-btn-lg">
+                                            <asp:LinkButton ID="lnkModGuardar" runat="server" Text="<i class='glyphicon glyphicon-floppy-disk'></i>&nbsp;&nbsp;&nbsp;Guardar" class="btn btn-primary" OnClick="lnkModGuardar_Click" />
+                                        </span>
+                                    </div>
 
-                                </tr>
+                                    <div class="col-md-6 col-xs-6">
+                                        <span class="input-group-btn-lg">
+                                            <button type="submit" name="Limpiar" id="limpiar" class="btn-form btn-primary btn-block">
+                                                Limpiar
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div> <!-- box-footer -->
+    	                </div><!-- box-body -->
 
-                                <tr>
-                                    <td class="text-center" colspan="2">
-                                        <asp:LinkButton ID="lnkModGuardar" runat="server" Text="<i class='glyphicon glyphicon-floppy-disk'></i>&nbsp;&nbsp;&nbsp;Guardar" class="btn btn-primary" OnClick="lnkModGuardar_Click" />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                       
                     </div>
                 </div>
             </div>           
@@ -164,7 +182,7 @@
                 $('#ContentPlaceHolder1_tableClaves').DataTable({
                     "paging": true,
                     "lengthChange": false,
-                    "searching": true,
+                    "searching": false,
                     "ordering": true,
                     "info": true,
                     "autoWidth": true,
@@ -174,7 +192,7 @@
                 $('#tableClaves').DataTable({
                     "paging": true,
                     "lengthChange": false,
-                    "searching": true,
+                    "searching": false,
                     "ordering": true,
                     "info": true,
                     "autoWidth": true,

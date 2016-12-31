@@ -272,6 +272,8 @@ namespace SIV
 
                 tableClaves.Rows.Add(thr);
 
+                var counter = 0;
+
                 foreach (Clave item in listClaves)
                 {
                     tr = new TableRow();
@@ -289,41 +291,94 @@ namespace SIV
                     tr.Cells.Add(tc);
 
                     tc = new TableCell();
-                   
+                    counter = 0;
+                    
+
                     if (item.permiso_estacionamiento)
                     {
                         lbl = new Label();
-                        lbl.Text = "Estacionamiento<br/>";
+                        
+                        if (counter == 0) {
+                            lbl.Text = "Estacionamiento";
+                            counter++;
+                        }
                        tc.Controls.Add(lbl);
                     }
                     if (item.permiso_lista_negra)
                     {
                         lbl = new Label();
                         lbl.Text = "Lista negra<br/>";
+                        if ((counter % 2) == 1)
+                        {
+                            lbl.Text = ", Lista negra<br/>";
+                            counter++;
+                        }
+                        else {
+                            lbl.Text = "Lista negra";
+                            counter++;
+                        }
                         tc.Controls.Add(lbl);
                     }
                     if (item.permiso_residentes)
                     {
-                        lbl = new Label();
-                        lbl.Text = "Residentes<br/>";
+                        lbl = new Label();                       
+                        
+                        if ((counter % 2) == 1)
+                        {
+                            lbl.Text = ", Residentes<br/>";
+                            counter++;
+                        }
+                        else
+                        {
+                            lbl.Text = "Residentes";
+                            counter++;
+                        }
                         tc.Controls.Add(lbl);
+
                     }
                     if (item.permiso_proveedores)
                     {
                         lbl = new Label();
-                        lbl.Text = "Proveedores<br/>";
+                        if ((counter % 2) == 1)
+                        {
+                            lbl.Text = ", Proveedores<br/>";
+                            counter++;
+                        }
+                        else
+                        {
+                            lbl.Text = "Proveedores";
+                            counter++;
+                        }
                         tc.Controls.Add(lbl);
                     }
                     if (item.permiso_empresas)
                     {
                         lbl = new Label();
-                        lbl.Text = "Empresas<br/>";
+                        if ((counter % 2) == 1)
+                        {
+                            lbl.Text = ", Empresas<br/>";
+                            counter++;
+                        }
+                        else
+                        {
+                            lbl.Text = "Empresas";
+                            counter++;
+                        }
                         tc.Controls.Add(lbl);
                     }
                     if (item.permiso_viviendas)
                     {
                         lbl = new Label();
-                        lbl.Text = "Viviendas<br/>";
+                        if ((counter % 2) == 1)
+                        {
+                            lbl.Text = ", Viviendas<br/>";
+                            counter++;
+                        }
+                        else
+                        {
+                            lbl.Text = "Viviendas";
+                            counter++;
+                        }
                         tc.Controls.Add(lbl);
                     }
                     tr.Cells.Add(tc);
