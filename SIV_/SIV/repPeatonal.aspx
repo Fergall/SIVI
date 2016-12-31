@@ -1,9 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterFront.Master" AutoEventWireup="true" CodeBehind="repPeatonal.aspx.cs" Inherits="SIV.repPeatonal" EnableEventValidation="true" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterFront.Master" AutoEventWireup="true" CodeBehind="repPeatonal.aspx.cs" Inherits="SIV.repPeatonal" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .formulario{
-            margin-bottom:40px;
+            margin-bottom:20px;
             display: list-item;
+            list-style: none;
         }
     </style>
 </asp:Content>
@@ -15,7 +16,7 @@
             <br />
             <div class="panel ">
                 <div class="panel-body">
-                    <form class="form-horizontal">
+                    <div class="form-horizontal">
 
                       <div class="form-group formulario">
                         <label class="col-sm-2 control-label">Apellido :</label>
@@ -37,7 +38,7 @@
                             <asp:LinkButton ID="lnk_buscar"  runat="server" Text="<i class='glyphicon glyphicon-search'></i>&nbsp;&nbsp;&nbsp;Buscar" class="btn btn-primary" OnClick="lnk_buscar_Click" />
                         </div>
                       </div>
-                   </form>
+                   </div>
                 </div>
             </div>
 
@@ -48,4 +49,31 @@
 
             <div></div>
     </div>
+    <script>
+        $(function () {
+            window.onload = function () {
+                var grid = document.getElementById('ContentPlaceHolder1_tableRes');
+                var tbody = grid.getElementsByTagName("tbody")[0]; //gets the first and only tbody
+                var firstTr = tbody.getElementsByTagName("tr")[0]; //gets the first tr, hopefully contains the th's
+
+                tbody.removeChild(firstTr); //remove tr's from table
+
+                var newTh = document.createElement('thead'); //creates thead
+                newTh.appendChild(firstTr); //puts ths in thead
+                grid.insertBefore(newTh, tbody); //puts thead behore tbody
+
+
+                $('#ContentPlaceHolder1_tableRes').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": true,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": true,
+                    "pageLength": 6
+                });
+
+            }
+		  });
+		</script>
 </asp:Content>
