@@ -13,15 +13,6 @@ namespace SIV {
     public partial class repPeatonal {
         
         /// <summary>
-        /// lblFilApellido control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFilApellido;
-        
-        /// <summary>
         /// txtFilApellido control.
         /// </summary>
         /// <remarks>
@@ -29,15 +20,6 @@ namespace SIV {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFilApellido;
-        
-        /// <summary>
-        /// lblFilTipo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFilTipo;
         
         /// <summary>
         /// ddlFilTipo control.
