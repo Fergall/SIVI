@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'SIV';
+  src:  url('fonts/SIV.eot?it8x1z');
+  src:  url('fonts/SIV.eot?it8x1z#iefix') format('embedded-opentype'),
+    url('fonts/SIV.ttf?it8x1z') format('truetype'),
+    url('fonts/SIV.woff?it8x1z') format('woff'),
+    url('fonts/SIV.svg?it8x1z#SIV') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'SIV' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 50px;
+  font-weight: 400;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-reportes:before {
+  content: "\e907";
+}
+.icon-add-peaton:before {
+  content: "\e900";
+}
+.icon-add-vehiculo:before {
+  content: "\e901";
+}
+.icon-ajustes:before {
+  content: "\e902";
+}
+.icon-estacionamiento:before {
+  content: "\e903";
+}
+.icon-logout:before {
+  content: "\e904";
+}
+.icon-preguntas:before {
+  content: "\e905";
+}
+.icon-proveedores:before {
+  content: "\e906";
+}
+

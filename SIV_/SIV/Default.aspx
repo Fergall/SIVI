@@ -34,18 +34,18 @@
     </script>
     <style>
         body {
-          padding-top: 40px;
-          padding-bottom: 40px;
           background-color: #bcb4de;
+          background-size:cover;
           background-image: url('css/img/bg1.jpg');
           background-blend-mode: soft-light;
-          background-size:cover;
+          overflow-y: hidden;
+          
         }
 
         .form-signin {
           max-width: 330px;
           padding: 15px;
-          margin: 20% auto;
+          margin: 10% auto;
         }
         .form-signin .form-control {
           position: relative;

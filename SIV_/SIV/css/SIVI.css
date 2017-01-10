@@ -409,8 +409,8 @@ a:focus {
   }
   
   .navbar-custom-menu .navbar-nav > li > a {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     line-height: 20px;
   }
   

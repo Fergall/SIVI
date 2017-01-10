@@ -105,6 +105,9 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\estilo2.css" />
+    <Content Include="css\fonts\icomoon.svg" />
+    <Content Include="css\fonts\SIV.svg" />
+    <Content Include="css\img\bg1.jpg" />
     <Content Include="css\img\siv-DESA BLANCO.png" />
     <Content Include="css\img\siv-DESA.png" />
     <Content Include="css\img\siv-logo-200px.png" />
@@ -142,6 +145,7 @@
     <Content Include="css\skins\skin-yellow.min.css" />
     <Content Include="css\skins\_all-skins.css" />
     <Content Include="css\skins\_all-skins.min.css" />
+    <Content Include="css\style.css" />
     <Content Include="ejemplo1.html" />
     <Content Include="fotos\636176878767959546.jpg" />
     <Content Include="fotos\636176880806708361.jpg" />
@@ -1007,6 +1011,13 @@
     <Content Include="plugins\datatables\extensions\TableTools\Readme.md" />
     <Content Include="plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="plugins\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="css\fonts\icomoon.eot" />
+    <Content Include="css\fonts\icomoon.ttf" />
+    <Content Include="css\fonts\icomoon.woff" />
+    <Content Include="css\fonts\SIV.eot" />
+    <Content Include="css\fonts\SIV.ttf" />
+    <Content Include="css\fonts\SIV.woff" />
+    <Content Include="css\selection.json" />
     <None Include="Properties\PublishProfiles\control visitas.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

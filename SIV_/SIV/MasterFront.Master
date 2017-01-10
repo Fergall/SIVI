@@ -9,7 +9,11 @@
     <script src="Scripts/jquery-3.1.1.min.js"></script>
     <script src="Scripts/jquery.rut.js"></script>
 
-    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/demo-files/demo.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="css/demo-files/demo.js"></script>
+
+ <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/SIVI.css" rel="stylesheet">
     <link rel="stylesheet" href="css/skins/_all-skins.css">
@@ -18,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
 	
 	<!-- daterange picker -->
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css"/>
@@ -31,6 +36,8 @@
     <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css"/>
     <!-- Select2 -->
     <link rel="stylesheet" href="plugins/select2/select2.min.css"/>
+
+    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -195,29 +202,29 @@
               -->
 
               <li class="messages-menu text-center">
-                <a href="ingPeatonal.aspx" class="dropdown-toggle"  ><i class="fa fa-users fa-3x"></i> <br> Peatón</a>
+                <a href="ingPeatonal.aspx" class="dropdown-toggle"  ><span class="icon-add-peaton"></span> <br> Peatón</a>
               </li>
 
               <li class="messages-menu text-center">
-                <a href="ingVehicular.aspx" class="dropdown-toggle"  ><i class="fa fa-car fa-3x"></i> <br> Vehiculo</a>
+                <a href="ingVehicular.aspx" class="dropdown-toggle"  ><span class="icon-add-vehiculo"></span> <br> Vehiculo</a>
               </li>
 
               <li class="messages-menu text-center">
-                <a href="preasignacion.html" class="dropdown-toggle"  ><i class="fa fa-truck fa-3x"></i> <br> Proveedor</a>
+                <a href="preasignacion.html" class="dropdown-toggle"  ><span class="icon-proveedores"></span> <br> Proveedor</a>
               </li>
           
               <li class="messages-menu text-center">
-                <a href="preasignacion.html" class="dropdown-toggle"  ><i class="fa fa-calendar-plus-o fa-3x"></i> <br> Reservar</a>
+                <a href="preasignacion.html" class="dropdown-toggle"  ><span class="icon-estacionamiento"></span> <br> Reservar</a>
               </li>
           
               <li class="dropdown messages-menu text-center">
-                <a href="repPeatonal.aspx" class="dropdown-toggle"  ><i class="fa fa-file-text-o fa-3x"></i> <br> Reportes</a>
+                <a href="repPeatonal.aspx" class="dropdown-toggle"  ><span class="icon-reportes"></span> <br> Reportes</a>
               </li>
           
               <!-- Notifications: style can be found in dropdown.less -->
               <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown">
-                  <i class="fa fa-gears fa-3x"></i> <br> Ajustes          
+                  <span class="icon-ajustes"></span> <br> Ajustes          
                 </a>
                 <ul class="dropdown-menu">             
                   <li>
@@ -285,11 +292,11 @@
 			
 
 			  <li class="dropdown messages-menu text-center">
-                <a href="faq.html" class="dropdown-toggle"  ><i class="fa fa-question fa-3x"></i> <br> Preguntas</a>
+                <a href="faq.html" class="dropdown-toggle"  ><span class="icon-preguntas"></span> <br> Preguntas</a>
               </li>
           
               <li class="dropdown messages-menu text-center">
-                <asp:LinkButton ID="lnk_cerrar_sesion" runat="server" Text="<i class='fa fa-power-off fa-3x'></i> <br> Salir" class="dropdown-toggle" OnClick="lnk_cerrar_sesion_Click" />
+                <asp:LinkButton ID="lnk_cerrar_sesion" runat="server" Text="<span class='icon-logout'></span></i> <br> Salir" class="dropdown-toggle" OnClick="lnk_cerrar_sesion_Click" />
                 
               </li>
               <!-- User Account: style can be found in dropdown.less -->
@@ -328,13 +335,11 @@
 
 <!-- Copiar esto al final -->
 <footer class="main-footer">
-    <div class="container">
-      <div class="pull-right hidden-xs">
-        <h5><b>Version</b> 1.0.2</h5>
-      </div>
-      <h5><strong>Copyright &copy;2016 <a href="http://Desarrollamos.cl">Desarrollamos.cl</a>.</strong> Todos los derechos reservados.</h5>
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.2
     </div>
-    <!-- /.container -->
+    <strong>Copyright &copy; 2016 <a href="http://desarrollamos.cl">Desarrollamos.cl</a>.</strong> All rights
+    reserved.
   </footer>
 
 
@@ -475,9 +480,9 @@
 
 	        
 	<script>
-		$( document ).ready(function){   
-			$(".dropdown-button").dropdown();
-		};
+	    $( document ).ready(function){   
+	        $(".dropdown-button").dropdown();
+	    };
 	</script>
 
 </body>
